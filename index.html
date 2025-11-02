@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(reg => console.log('Service Worker registrato', reg))
+      .catch(err => console.error('Service Worker errore', err));
+  }
+</script>
+
   <link rel="manifest" href="/riepilogo/manifest.json">
 
   <meta charset="UTF-8">
